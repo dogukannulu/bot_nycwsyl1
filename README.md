@@ -12,7 +12,8 @@ logging pip requirement: 0.4.9.6
 - İstenen web sayfasının belirtilen kısmının kod ve text hali çağırıldı.
 - Text halinin istenen şekilde görüntülenmesi için fonksiyon define edildi.
 - Sonuç print edildi.
-- Kod, pylint ile kontrol edildi ve puan 6.1'den yaklaşık 10'a çıkarıldı.
+- Kod, pylint ile kontrol edildi ve puan 6.1'den yaklaşık 9.3'e çıkarıldı.
 - requests kullanımı için try bloğu kullanıldı.
 - logging kütüphanesiyle loglar test.log dosyasına yazdırılıyor.
-- 
+- Kod, Ubuntu'da başarıyla çalıştı.
+- JSON dosyası oluşturulacak.
