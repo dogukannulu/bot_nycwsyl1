@@ -12,6 +12,7 @@ logging pip requirement: 0.4.9.6
 - İstenen web sayfasının belirtilen kısmının kod ve text hali çağırıldı.
 - Text halinin istenen şekilde görüntülenmesi için fonksiyon define edildi.
 - Sonuç print edildi.
-- logging ile loglar kontrol edilecek. try blokları çoğaltılacak. Kod en son pylint üzerinde denenecek. Ubuntu'da çalıştırıldıktan sonra son commit yapılacak.
-
-Kod geliştikçe bu README dosyasında commitler devam edecek.
+- Kod, pylint ile kontrol edildi ve puan 6.1'den yaklaşık 10'a çıkarıldı.
+- requests kullanımı için try bloğu kullanıldı.
+- logging kütüphanesiyle loglar test.log dosyasına yazdırılıyor.
+- 
