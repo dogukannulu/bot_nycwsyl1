@@ -4,9 +4,10 @@ Proje için pip komutuyla BeautifulSoup, logging ve requests kütüphaneleri ind
 
 pip requirements:
 
-BeautifulSoup4 pip requirement: 4.10.0
+BeautifulSoup4 and bs4 pip requirement: 4.10.0
 requests pip requirement: 2.26.0
 logging pip requirement: 0.4.9.6
+lxml pip requirement: 4.6.3
 
 - Gerekli kütüphaneler indirildi. 
 - İstenen web sayfasının belirtilen kısmının kod ve text hali çağırıldı.
@@ -16,4 +17,8 @@ logging pip requirement: 0.4.9.6
 - requests kullanımı için try bloğu kullanıldı.
 - logging kütüphanesiyle loglar test.log dosyasına yazdırılıyor.
 - Kod, Ubuntu'da başarıyla çalıştı.
-- JSON dosyası oluşturulacak.
+- JSON dosyası oluşturuldu. "Across" ve "Down" başlıkları ikişer kez yazdırıldı. Sebebini çözemediğim için o şekilde bırakmak zorunda kaldım.
+- Kod, son haliyle Ubuntu'da başarıyla çalıştırıldı.
+- pylint'e tekrar sokuldu ve 9.52/10 sonucu alındı.
+- log'larda tarih ve saat de belirtildi.
+- Başlıkların 2'şer kere basılması dışında problem gözükmüyor.

@@ -6,6 +6,8 @@ try:
     from bs4 import BeautifulSoup
     import requests
     import logging
+    import json
+    import re
 except ModuleNotFoundError:
     print("You have to install the required libraries".upper())
 else:
@@ -23,11 +25,12 @@ except requests.exceptions.RequestException as my_error:
 
 
 code_source = BeautifulSoup(web_page.content,"lxml")
-
 total_area = code_source.find("section",attrs={"class":"Layout-clueLists--10_Xl"})
-
 total_text = total_area.text
 total_text = total_text.replace("Down","\nDown")
+
+text1 = total_text[:total_text.find("Down")]
+text2 = total_text[total_text.find("Down"):]
 
 def visualize(my_text):
     """ Web sayfasından alınan bölümü istenen şekilde yazdıran fonksiyon"""
@@ -40,5 +43,26 @@ def visualize(my_text):
         elif not i.isnumeric():
             my_new_text += i
     logging.info(my_new_text)
+    print(my_new_text)
 
 visualize(total_text)
+
+#JSON dosyası için fonksiyon define edildi ve .json dosyası oluşturuldu.
+data = {}
+def write_json(text):
+    '''Ana texti ikiye bölüp bunları data listesine ekleyen fonksiyon'''
+    res = re.split('(\d+)',text)
+    data[res[0]]= []
+
+    for i in range(1,len(res),2):
+        across_element = {"number": res[i], "string": res[i+1]}
+        data[res[0]].append(across_element)
+    return data
+
+mainContent = [
+    write_json(text1),
+    write_json(text2)
+]
+
+with open('data.json', 'w') as outfile: json.dump(mainContent, outfile)
+        
