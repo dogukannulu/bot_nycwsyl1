@@ -9,7 +9,7 @@ requests pip requirement: 2.26.0
 logging pip requirement: 0.4.9.6
 lxml pip requirement: 4.6.3
 
-- Gerekli kütüphaneler indirildi. 
+- Gerekli kütüphaneler indirildi.
 - İstenen web sayfasının belirtilen kısmının kod ve text hali çağırıldı.
 - Text halinin istenen şekilde görüntülenmesi için fonksiyon define edildi.
 - Sonuç print edildi.
