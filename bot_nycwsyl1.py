@@ -35,13 +35,11 @@ text2 = total_text[total_text.find("Down"):]
 def visualize(my_text):
     """ Web sayfasından alınan bölümü istenen şekilde yazdıran fonksiyon"""
     my_new_text = ''
-    for i in my_text:
-        if i.isnumeric() and my_text.index(i)!=0:
-            my_new_text += '\n' + i + '.' + ' '
-        elif i.isnumeric() and my_text.index(i)==0:
-            my_new_text += i + '.' + ' '
-        elif not i.isnumeric():
-            my_new_text += i
+    for i in range(len(my_text)):
+        if my_text[i].isnumeric() and my_text[i-1].isnumeric()==False:
+            my_new_text += '\n' + my_text[i] + '.' + ' '
+        else:
+            my_new_text += my_text[i]
     logging.info(my_new_text)
     print(my_new_text)
 
